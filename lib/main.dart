@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:timer_package/screens/current_time.dart';
 import 'package:timer_package/screens/timer.dart';
 
-
 void main() => runApp(const MyApp());
 
 class MyApp extends StatelessWidget {
@@ -36,4 +35,3 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-

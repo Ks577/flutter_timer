@@ -7,7 +7,7 @@ class MyHomePage extends StatefulWidget {
   const MyHomePage({Key? key}) : super(key: key);
 
   @override
-  _MyHomePageState createState() => _MyHomePageState();
+  State<MyHomePage> createState() => _MyHomePageState();
 }
 
 class _MyHomePageState extends State<MyHomePage> {
@@ -21,24 +21,30 @@ class _MyHomePageState extends State<MyHomePage> {
     var dateTime = DateTime.now();
     return Scaffold(
       backgroundColor: Colors.white,
-      body: Container(
-        padding: const EdgeInsets.symmetric(vertical: 60, horizontal: 70),
+      body: Center(
         child: Column(
-          children: <Widget>[
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
             const Text(
               'Tекущее время',
               style: TextStyle(fontSize: 28),
             ),
+            const SizedBox(
+              height: 20,
+            ),
             Text(
               _timeFormat.format(dateTime),
               style: const TextStyle(fontSize: 50),
+            ),
+            const SizedBox(
+              height: 20,
             ),
             Text(
               _dateFormat.format(dateTime),
               style: const TextStyle(fontSize: 18),
             ),
             const SizedBox(
-              height: 50,
+              height: 20,
             ),
             Image.network(
               'https://www.pngarts.com/files/10/Vector-Clock-PNG-Pic.png',
